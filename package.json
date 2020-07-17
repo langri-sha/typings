@@ -42,5 +42,8 @@
       "email": "fontanezj1@gmail.com",
       "url": "https://github.com/tato123"
     }
-  ]
+  ],
+  "scripts": {
+    "flowgen": "find types -type f -name '*.d.ts' -exec sh -c 'npx flowgen $0 --add-flow-header --interface-records --flow-typed-format flow/$(echo $0 | sed 's/d.ts/.js/g')' {} \\;"
+  }
 }
